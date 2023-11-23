@@ -92,10 +92,10 @@ namespace Lab4
         public static void Main(string[] args)
         {
             // Create an instance of the Program class
-            Program lab = new Program();
+            Program employeeSort = new Program();
 
             // Read employee data from the CSV file
-            lab.Read("employees.txt");
+            employeeSort.Read("employees.txt");
 
             // Initialize a boolean variable to control program exit
             bool exit = false;
@@ -132,32 +132,32 @@ Enter your choice: ";
                     {
                         // Sort employees by name in ascending order
                         case 1:
-                            lab.employees.Sort((e1, e2) => e1.Name.CompareTo(e2.Name));
-                            lab.DisplayTable();
+                            employeeSort.employees.Sort((e1, e2) => e1.Name.CompareTo(e2.Name));
+                            employeeSort.DisplayTable();
                             break;
 
                         // Sort employees by number in ascending order
                         case 2:
-                            lab.employees.Sort((e1, e2) => e1.Number.CompareTo(e2.Number));
-                            lab.DisplayTable();
+                            employeeSort.employees.Sort((e1, e2) => e1.Number.CompareTo(e2.Number));
+                            employeeSort.DisplayTable();
                             break;
                         
                         // Sort employees by pay rate in descending order
                         case 3:
-                            lab.employees.Sort((e1, e2) => e2.Rate.CompareTo(e1.Rate));
-                            lab.DisplayTable();
+                            employeeSort.employees.Sort((e1, e2) => e2.Rate.CompareTo(e1.Rate));
+                            employeeSort.DisplayTable();
                             break;
                         
                         // Sort employees by hours in descending order
                         case 4:
-                            lab.employees.Sort((e1, e2) => e2.Hours.CompareTo(e1.Hours));
-                            lab.DisplayTable();
+                            employeeSort.employees.Sort((e1, e2) => e2.Hours.CompareTo(e1.Hours));
+                            employeeSort.DisplayTable();
                             break;
                         
                         // Sort employees by gross pay in descending order
                         case 5:
-                            lab.employees.Sort((e1, e2) => e2.GetGross().CompareTo(e1.GetGross()));
-                            lab.DisplayTable();
+                            employeeSort.employees.Sort((e1, e2) => e2.GetGross().CompareTo(e1.GetGross()));
+                            employeeSort.DisplayTable();
                             break;
 
                         // Set the 'exit' flag to true, exiting the program    
