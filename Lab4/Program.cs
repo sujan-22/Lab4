@@ -1,4 +1,11 @@
-﻿///I, Sujan Rokad, 000882948 certify that this material is my origianl work. No other person's work has been used without due acknowledgement.
+﻿/*
+Class:                  Form1.cs
+Author:                 Sujan Rokad
+Date:                   November 15, 2023
+Authorship statement:   I, Sujan Rokad, 000882948 certify that this material is my original work. No other person's work has been used without due acknowledgement.
+
+Purpose:                The Program class represents a console application that reads employee data from a CSV file, allows users to sort the data based on different criteria, and displays the sorted results in a table format. This program serves as a tool for managing and analyzing employee information, offering users the flexibility to sort data by employee name, number, pay rate, hours worked, and gross pay. The primary goal is to provide a user-friendly interface for interacting with employee data and gaining insights through various sorting options.         
+*/
 using System;
 using System.Collections.Generic;
 using System.IO;

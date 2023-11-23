@@ -7,15 +7,38 @@ using System.Threading.Tasks;
 
 namespace Lab4
 {
+    /// <summary>
+    /// Represents an employee with basic information and methods to calculate gross pay.
+    /// </summary>
     internal class Employee
     {
-        // Private fields to store employee information
+        /// <summary>
+        /// Gets or sets the name of the employee.
+        /// </summary>
         public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or sets the employee number.
+        /// </summary>
         public int Number { get; set; }
+
+        /// <summary>
+        /// Gets or sets the hourly rate of the employee.
+        /// </summary>
         public decimal Rate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the number of hours worked by the employee.
+        /// </summary>
         public double Hours { get; set; }
 
-        // Constructor to initialize employee information
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Employee"/> class.
+        /// </summary>
+        /// <param name="name">The name of the employee.</param>
+        /// <param name="number">The employee number.</param>
+        /// <param name="rate">The hourly rate of the employee.</param>
+        /// <param name="hours">The number of hours worked by the employee.</param>
         public Employee(string name, int number, decimal rate, double hours)
         {
             Name = name;
@@ -24,7 +47,10 @@ namespace Lab4
             Hours = hours;
         }
 
-        // Getter methods
+        /// <summary>
+        /// Calculates the gross pay for the employee.
+        /// </summary>
+        /// <returns>The gross pay for the employee.</returns>
         public decimal GetGross()
         {
             // Calculate gross pay with overtime
@@ -39,13 +65,15 @@ namespace Lab4
                 return (decimal)(Hours * (double)Rate);
             }
         }
-        
-        // ToString method to format employee information
+
+        /// <summary>
+        /// Converts the employee information to a formatted string.
+        /// </summary>
+        /// <returns>A formatted string representing the employee information.</returns>
         public override string ToString()
         {
             return $"{Name,-21} {Number,-(int)9.5} {Rate,-(int)9.5:C} {Hours,-8:F2} {GetGross(),-(int)9.5:C}";
         }
     }
-
 }
 
